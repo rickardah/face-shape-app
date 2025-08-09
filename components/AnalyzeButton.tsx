@@ -1,12 +1,9 @@
 "use client";
 
-export default function AnalyzeButton() {
-  function handleClick() {
-    // TODO: Replace with MediaPipe Face Mesh integration.
-    console.log("Analyzing image...");
-  }
+interface Props {
+  onAnalyze: () => void;
+}
 
-  return (
-    <button onClick={handleClick}>Analysera</button>
-  );
+export default function AnalyzeButton({ onAnalyze }: Props) {
+  return <button onClick={onAnalyze}>Analysera</button>;
 }
